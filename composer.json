@@ -1,0 +1,13 @@
+{
+    "name": "crockerio/elap",
+    "description": "Extendable Laravel Admin Panel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joshua Crocker",
+            "email": "joshua+code@crocker.io"
+        }
+    ],
+    "require": {}
+}
