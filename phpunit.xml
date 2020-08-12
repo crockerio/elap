@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         colors="true"
-         cacheResult="false"
->
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="vendor/autoload.php"
+         colors="true" cacheResult="false">
+    <coverage includeUncoveredFiles="false">
+        <include>
+            <directory suffix=".php">src/</directory>
+        </include>
+    </coverage>
     <testsuites>
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
@@ -13,16 +15,6 @@
             <directory suffix="Test.php">./tests/Feature</directory>
         </testsuite>
     </testsuites>
-
-    <filter>
-        <whitelist addUncoveredFilesFromWhitelist="false">
-            <directory suffix=".php">src/</directory>
-<!--            <exclude>-->
-<!--                <file>src/Console/Kernel.php</file>-->
-<!--                <file>src/Exceptions/Handler.php</file>-->
-<!--            </exclude>-->
-        </whitelist>
-    </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
