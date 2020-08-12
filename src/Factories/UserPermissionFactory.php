@@ -18,4 +18,3 @@ $factory->define(UserPermission::class, function (Faker $faker) {
         'user_type' => get_class($user),
     ];
 });
-

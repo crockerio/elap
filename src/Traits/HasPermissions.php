@@ -3,7 +3,6 @@
 namespace Crockerio\ELAP\Traits;
 
 use Crockerio\ELAP\Models\Permission;
-use Illuminate\Database\Eloquent\Model;
 
 trait HasPermissions
 {
