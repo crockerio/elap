@@ -29,5 +29,8 @@
                 "Crockerio\\ELAP\\ELAPServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
     }
 }
