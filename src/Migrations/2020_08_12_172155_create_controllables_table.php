@@ -15,13 +15,13 @@ class CreateControllablesTable extends Migration
     {
         Schema::create('controllables', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('permission_id');
-            $table->unsignedInteger('controllable_id');
+            $table->unsignedBigInteger('permission_id');
+            $table->unsignedBigInteger('controllable_id');
             $table->string('controllable_type');
             $table->timestamps();
         });
 
-        Schema::table('user_permissions', function (Blueprint $table) {
+        Schema::table('controllables', function (Blueprint $table) {
             $table->foreign('permission_id')->references('id')->on('permissions');
         });
     }
@@ -33,6 +33,10 @@ class CreateControllablesTable extends Migration
      */
     public function down()
     {
+        Schema::table('controllables', function (Blueprint $table) {
+            $table->dropForeign('controllables_permission_id_foreign');
+        });
+
         Schema::dropIfExists('controllables');
     }
 }
