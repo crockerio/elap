@@ -10,6 +10,9 @@
         }
     ],
     "autoload": {
+        "classmap": [
+            "src/Factories"
+        ],
         "psr-4": {
             "Crockerio\\ELAP\\": "src/"
         }

@@ -1,7 +1,5 @@
 <?php
 
-namespace Crockerio\ELAP\Factories;
-
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use Crockerio\ELAP\Models\Role;
