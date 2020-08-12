@@ -9,5 +9,25 @@
             "email": "joshua+code@crocker.io"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Crockerio\\ELAP\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Crockerio\\ELAP\\Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^5.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Crockerio\\ELAP\\ELAPServiceProvider"
+            ]
+        }
+    }
 }

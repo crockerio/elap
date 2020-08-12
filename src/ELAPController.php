@@ -2,7 +2,7 @@
 
 namespace Crockerio\ELAP;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 
 class ELAPController extends Controller
 {
