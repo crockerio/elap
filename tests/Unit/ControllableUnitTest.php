@@ -3,12 +3,12 @@
 namespace Crockerio\ELAP\Tests\Unit;
 
 use Crockerio\ELAP\Models\Permission;
-use Crockerio\ELAP\Models\UserPermission;
+use Crockerio\ELAP\Models\Controllable;
 use Crockerio\ELAP\Tests\TestCase;
 use Crockerio\ELAP\Tests\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class UserPermissionUnitTest extends TestCase
+class ControllableUnitTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -17,7 +17,7 @@ class UserPermissionUnitTest extends TestCase
     {
         $permission = factory(Permission::class)->create();
 
-        $link = factory(UserPermission::class)->create([
+        $link = factory(Controllable::class)->create([
             'permission_id' => $permission->id,
         ]);
 
@@ -29,12 +29,12 @@ class UserPermissionUnitTest extends TestCase
     {
         $user = factory(User::class)->create();
 
-        $link = factory(UserPermission::class)->create([
-            'user_id' => $user->id,
-            'user_type' => User::class,
+        $link = factory(Controllable::class)->create([
+            'controllable_id' => $user->id,
+            'controllable_type' => User::class,
         ]);
 
-        $this->assertEquals($user->name, $link->user->name);
-        $this->assertEquals(User::class, $link->user_type);
+        $this->assertEquals($user->name, $link->controllable->name);
+        $this->assertEquals(User::class, $link->controllable_type);
     }
 }

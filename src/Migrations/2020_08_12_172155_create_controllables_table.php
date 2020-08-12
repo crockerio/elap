@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserPermissionsTable extends Migration
+class CreateControllablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUserPermissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_permissions', function (Blueprint $table) {
+        Schema::create('controllables', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('permission_id');
-            $table->unsignedInteger('user_id');
-            $table->string('user_type');
+            $table->unsignedInteger('controllable_id');
+            $table->string('controllable_type');
             $table->timestamps();
         });
 
@@ -33,6 +33,6 @@ class CreateUserPermissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_permissions');
+        Schema::dropIfExists('controllables');
     }
 }

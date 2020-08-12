@@ -4,9 +4,9 @@ namespace Crockerio\ELAP\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserPermission extends Model
+class Controllable extends Model
 {
-    public function user()
+    public function controllable()
     {
         return $this->morphTo();
     }
