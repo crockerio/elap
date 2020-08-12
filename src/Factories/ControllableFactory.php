@@ -2,8 +2,8 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use Crockerio\ELAP\Models\Permission;
 use Crockerio\ELAP\Models\Controllable;
+use Crockerio\ELAP\Models\Permission;
 use Crockerio\ELAP\Tests\User;
 use Faker\Generator as Faker;
 
