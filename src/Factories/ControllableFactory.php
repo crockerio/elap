@@ -18,4 +18,3 @@ $factory->define(Controllable::class, function (Faker $faker) {
         'controllable_type' => get_class($user),
     ];
 });
-
