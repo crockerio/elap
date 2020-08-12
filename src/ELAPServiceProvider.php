@@ -17,6 +17,11 @@ class ELAPServiceProvider extends ServiceProvider
     {
         // Register Controllers
         $this->app->make('Crockerio\ELAP\ELAPController');
+
+        // Merge with local config
+        $this->mergeConfigFrom(
+            __DIR__.'/config.php', 'elap'
+        );
     }
 
     /**
@@ -29,6 +34,11 @@ class ELAPServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Publish config
+        $this->publishes([
+            __DIR__.'/config.php' => config_path('elap.php'),
+        ]);
+
         // Setup routes file
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
