@@ -2,8 +2,8 @@
 
 namespace Crockerio\ELAP\Tests\Unit;
 
-use Crockerio\ELAP\Models\Permission;
 use Crockerio\ELAP\Models\Controllable;
+use Crockerio\ELAP\Models\Permission;
 use Crockerio\ELAP\Tests\TestCase;
 use Crockerio\ELAP\Tests\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
